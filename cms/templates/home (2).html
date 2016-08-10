@@ -1,0 +1,40 @@
+{% block main_content %}
+{% if latest_q %}
+    {% for question in latest_q %}
+    <div class="col-sm-3 col-lg-3">
+				<div class="dash-unit">
+	      		<dtitle>POLLS</dtitle>
+	      		<hr>
+	      		<div class="info-user">
+					<span aria-hidden="true" class="li_display fs2"></span>
+				</div>
+				<br>
+				<div class="text">
+				<h1><p><a href={% url "main:detail" question.id %}> {{ question.question_text}}</a></h1></p>
+				
+				</div>
+
+				</div>
+			</div>
+
+        
+				
+      
+</ul>
+      <!-- LOCAL TIME BLOCK -->
+      	
+      
+	  <!-- SECOND ROW OF BLOCKS -->     
+     
+	 
+	  <!-- FOURTH ROW OF BLOCKS -->     
+	
+	</div> 
+
+{% endfor %}
+</ul>
+{% else %}
+    <p>You Don't have any!!</p>
+{% endif %}
+
+{% endblock %}
